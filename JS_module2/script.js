@@ -6,7 +6,7 @@ function yourAge() {
 	var btn = document.getElementById('btn');
 	var c = new Date();
 	var date = c.getFullYear();
-	var dateShort = parseInt(date.toString().split('').splice(2, 2).join(''));
+	var dateShort = parseInt(date.toString().substring(2, 4));
 	var input = document.getElementById('one').value;
 	var inputNum = parseInt(input);
 	var age;
@@ -70,25 +70,23 @@ btnFindEntr.addEventListener('click', findEntrance);
 // Если введен правильный логин и пароль вывести “Добро пожаловать”, в противном случае - вывести “ошибка”.
 
 
-var usersData = {
-	user1: {login:"ivan", password:"333"},
-	user2: {login:"ssss", password:"777"},
-	user3: {login:"gibs", password:"0000"}
-}
+var usersData = [
+	{login:"ivan", password:"333"},
+	{login:"ssss", password:"777"},
+	{login:"gibs", password:"0000"}
+]
 
 function checkUser() {
     var btnCheck = document.getElementById('btnCheck');
 	var log = document.getElementById('login').value;
 	var pass = document.getElementById('password').value;
-    if (log === usersData.user1.login && pass === usersData.user1.password ) {
-		alert('Welcome');
-	} else if (log === usersData.user2.login && pass === usersData.user2.password) {
-		alert('Welcome');
-	} else if (log === usersData.user3.login && pass === usersData.user3.password ) {
-		alert('Welcome');
-	} else {
-		alert('Sorry, incorrect login or password! Try again please!');
+	for (var i = 0, max = usersData.length; i < max;  i++) {
+		if (log === usersData[i].login && pass === usersData[i].password) {
+			alert('Welcome');
+			return;
+		}
 	}
+	alert('Sorry, incorrect login or password! Try again please!');
 }
 
 btnCheck.addEventListener('click', checkUser);
@@ -98,9 +96,9 @@ btnCheck.addEventListener('click', checkUser);
 
 function getBiggestNum() {
 	var btnFindBigNum = document.getElementById('btnFindBigNum');
-	var uno = document.getElementById('uno').value;
-	var dos = document.getElementById('dos').value;
-	var tres = document.getElementById('tres').value;
+	var uno = parseInt(document.getElementById('uno').value);
+	var dos = parseInt(document.getElementById('dos').value);
+	var tres = parseInt(document.getElementById('tres').value);
 
 	if ( uno >= dos && uno >= tres) {
 		alert(uno);
