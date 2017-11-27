@@ -1,0 +1,11 @@
+.empty {
+	border: 2px solid red;
+}
+
+.highlight {
+	background-color: red;
+}
+
+li {
+	width: 10%;
+}
