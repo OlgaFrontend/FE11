@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js_module8</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="app">
+		<header class="header">
+			<h1 class="header__logo">Movie Mate</h1>
+			<ul class="navigation">
+				<li class="navigation__item">
+					<a class="navigation__link" href="#">ABOUT</a>
+				</li>
+				<li class="navigation__item">
+					<a class="navigation__link" href="#">BROWSE</a>
+				</li>
+				<li class="navigation__item">
+					<a class="navigation__link" href="#">LOGIN</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<div class="app-body">
+				<div class="app-sidebar">
+					<form id="form" class="search-form">
+						<input id="input" class="search-form__input" type="text" placeholder="Search for movies by name ..."></input>
+						<button id="search-form__btn" class="search-form__btn" type="submit">search</button>
+					</form>
+					<div class="search-categories">
+						<button class="search-categories__btn">popular</button>
+						<button class="search-categories__btn">top rated</button>
+						<button class="search-categories__btn">upcoming</button>
+					</div>
+				</div>
+				<div class="movies-list">
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
