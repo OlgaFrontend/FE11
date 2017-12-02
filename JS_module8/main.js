@@ -1,7 +1,6 @@
 const form = document.getElementById('form');
 const moviesList =document.querySelector('.movies-list');
 const input = document.getElementById('input');
-const searchBtn = document.getElementById('search-form__btn');
 
 const endpoint = 'https://api.themoviedb.org/3/';
 const res = 'search/movie';
@@ -43,7 +42,7 @@ const renderGallery = (movies, parent) => {
 	parent.innerHTML= htmlString;
 }
 
-const getMoviesGallery = (data) =>
+const formatMovieData = (data) =>
     data.map(item => ({
   		poster_path: item.poster_path,
         title: item.title,
@@ -56,13 +55,12 @@ const getMoviesGallery = (data) =>
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   
-    if (input.value != '') {
+    if (input.value !== '') {
     	fetchMovies(input.value)
     	.then(data => {
-			const movies = getMoviesGallery(data);
+			const movies = formatMovieData(data);
 			renderGallery(movies, moviesList);
 		});
-		fetchMovies(input.value);
 		input.value = "";
     } else {
   		alert('Please enter a name of the movie');
