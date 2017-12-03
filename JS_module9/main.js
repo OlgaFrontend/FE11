@@ -48,8 +48,7 @@ form.addEventListener('submit', (evt) => {
 				details: movie.overview.slice(0, 99),
 				date: movie.release_date
     		})
-    		)
-    		console.table(movies);
+    		);
     		renderMovies(movies, compiled, moviesList);
     	});
     	input.value = "";
