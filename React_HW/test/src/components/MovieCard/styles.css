@@ -1,0 +1,72 @@
+.MovieCard {
+    position: relative;
+    flex: 0 0 29%;
+    margin-right: 2%;
+    padding: 8px;
+    margin-bottom: 16px;
+    color: #424242;
+    box-shadow: 0 0 2px 2px rgba(33,33,33,.5);
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.MovieCard__btn {
+    position: absolute;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.MovieCard__btn--del {
+    background-color: #ff5722;
+    color: #fff;
+    top: 8px;
+    right: 8px;
+    padding: 4px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    box-shadow: 0 2px 2px 0 rgba(33,33,33,.5);
+    transition: all .3s linear;
+}
+
+.MovieCard__btn--del:hover {
+    box-shadow: 0 4px 2px 0 rgba(33,33,33,.5);
+    background-color: #3f51b5;
+}
+
+.MovieInfo__title {
+    margin: 0;
+    width: 90%;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    /*white-space: wrap;*/
+}
+
+.MovieInfo__descr {
+    margin-bottom: 20px;
+    line-height: 1.3;
+    letter-spacing: -.2px;
+}
+
+.MovieInfo__rating {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.ChipsList {
+    display: flex;
+    width: 85%;
+    padding: 8px 0;
+    list-style: none;
+}
+
+.ChipsList__item {
+    margin-right: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #3f51b5;
+    color: #fff;
+}
